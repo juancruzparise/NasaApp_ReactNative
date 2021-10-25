@@ -42,7 +42,7 @@ export default function DayScreen() {
  
     return (
           <View style={styles.container}>
-         <ImageBackground source={Background} resizeMode="cover" style={styles.image}>
+         {/* <ImageBackground source={Background} resizeMode="cover" style={styles.image}> */}
           <Appbar.Header style={styles.header}>
           <Image source={require('./images/logo_nasa.png')} style={styles.iconBar} />
           <Appbar.Action icon="dots-vertical" onPress={() => setModalVisible(true)} style={styles.headerAction}/>
@@ -80,10 +80,10 @@ export default function DayScreen() {
               setModalVisible(!modalVisible);
             }}
           >
-            <BlurView  intensity={100} style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}>
+          <BlurView  intensity={100} style={[StyleSheet.absoluteFill, styles.nonBlurredContent]}>
           <View style={styles.centeredView} >
           <View style={styles.modalView}>
-          <ImageBackground source={background_Modal} resizeMode="cover" style={styles.backgroundModal}>
+          {/* <ImageBackground source={background_Modal} resizeMode="cover" style={styles.backgroundModal}> */}
             <Image source={require('./images/NASA_logo.png')} style={styles.iconModal}/>
             <Text style={styles.modalText}>APOD (Astronomy Picture of the Day)</Text>
             <Text style={styles.modalText}>In this section you can see an image or video with the information depending on the day, every day it changes</Text>
@@ -93,7 +93,7 @@ export default function DayScreen() {
             >
               <Text style={styles.textStyle}>Hide info</Text>
             </Pressable>
-            </ImageBackground>
+            {/* </ImageBackground> */}
           </View>
         </View>
         </BlurView>
@@ -103,7 +103,7 @@ export default function DayScreen() {
           </View>
           </ScrollView>
           </SafeAreaView>
-          </ImageBackground>
+          {/* </ImageBackground> */}
       </View>
     );
   }
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     color: '#fff',
-    backgroundColor: 'transparent'
+    backgroundColor: '#536162'
   },
   video:{
     height: 'auto',
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
  },
   modalView: {
     margin: 20,
-    backgroundColor: "transparent",
+    backgroundColor: "#6F4A8E",
     borderRadius: 20,
     padding: 10,
     margin: 'auto',

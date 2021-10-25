@@ -26,7 +26,7 @@ export default function HomeScreen({items}) {
         <View style={styles.containerAll}>
          <StatusBar hidden={true} translucent backgroundColor="transparent" style={styles.statusbar}/>
          {Platform.OS === 'ios' && <StatusBar barStyle="light-content" />} 
-         <ImageBackground source={Background} resizeMode="cover" style={styles.image}>
+         {/* <ImageBackground source={Background} resizeMode="cover" style={styles.image}> */}
         <Appbar.Header style={styles.header}>
         <Image source={require('./images/logo_nasa.png')} style={{ width: 100, height: 30}}/>
         </Appbar.Header>
@@ -78,7 +78,7 @@ export default function HomeScreen({items}) {
          
          </ScrollView>
          </SafeAreaView>
-         </ImageBackground>
+         {/* </ImageBackground> */}
          </View>
        )
        }
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     },
     containerAll:{
       flex : 1,
-      backgroundColor: '#BAD0DE',
+      backgroundColor: '#536162',
     },
     textInput:{
         backgroundColor: '#fff',
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
       alignItems: 'center', 
       justifyContent: 'center',
-      marginTop: 30
+      marginTop: 30,
     },
     iconoHeader:{
       backgroundColor:'transparent'
